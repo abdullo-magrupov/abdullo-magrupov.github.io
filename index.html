@@ -4,11 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Microservices / Docker</title>
+    
+    <meta name="author" content="Abdullo Magrupov">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +27,159 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+          <section>
+            <h1>Microservices and Docker</h1>
+
+            <aside class="notes">
+              Topic is Microservices and Docker
+            </aside>
+          </section>
+          <section>
+            <h3>Abdullo Magrupov</h3>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/abdullo-magrupov" >https://github.com/abdullo-magrupov</a>
+
+            <aside class="notes">
+                Presenter information
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h3>Agenda</h3>
+          <ul>
+            <li>Monolith</li>
+            <li>Microservices</li>
+            <li>Docker</li>
+          </ul>
+
+          <aside class="notes">
+            <ol>
+              <li>Brief introduction to Monolith architecture</li>
+              <li>Monolith drawbacks on large projects</li>
+              <li>Microservices are solution for dividing projects into parts</li>
+              <li>Microservices pros and cons</li>
+              <li>Microservices deployment issues</li>
+              <li>Docker for deployment</li>
+              <li>Docker benefits</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Monolithic architecture</h4>
+          <img data-src="./images/monolith.png" />
+
+          <aside class="notes">
+              <ol>
+                <li>Monolithic architecture contains all modules in one place</li>
+                <li>Has some benfits on classical small applications, but has far many drawbacks compared to the benefits</li>
+                <li>Scalability issues (hard to add new big modules)</li>
+                <li>Reliability issues (one bug will affect the availability of whole application)</li>
+                <li>Availability issues (if one service fails, the whole application has to be brought down)</li>
+                <li>Agility issues (even small component change requires reassambling the application)</li>
+                <li>Software Stack Autonomy issues (has barrier on implementing different stacks)</li>
+                <li>Issues with new team members (takes long time for getting to know whole application)</li>
+              </ol>
+            </aside>
+        </section>
+
+        <section>
+          <img data-src="./images/mono_vs_micro.jpg" />
+
+          <aside class="notes">
+            <p>Microservices are solution</p>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Microservice architecture</h4>
+          <img data-src="./images/microservice.png" />
+
+          <aside class="notes">
+            <ol>
+              <li>Solves problems by dividing app into multiple independent services</li>
+              <li>Services talk with each other through REST APIs</li>
+              <li>Each service can be developed on different software stack</li>
+              <li>However, has some drawbacks!</li>
+              <li>Complex architect design</li>
+              <li>Hard to deploy</li>
+              <li>Complex testing</li>
+              <li>Multiple database updates</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h4>What to choose?</h4>
+          <img data-src="./images/mono_or_micro.png" />
+
+          <aside class="notes">
+            <ol>
+              <li>Highly depends on the scale of the project</li>
+              <li>Prefer monolith for simple and small projects</li>
+              <li>Microservice can be better solution for large and long term projects</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h3>Deployment issues?</h3>
+
+          <aside class="notes">
+            <p>How to solve the microservice deployment issues?</p>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Docker is the solution!</h4>
+          <img style="width: 40%; margin-right: 5%;" data-src="./images/docker_logo.png" />
+          <img style="width: 40%;" data-src="./images/docker_ship.png" />
+
+          <aside class="notes">
+            <ol>
+              <li>Enables task isolation by creating docker container for each microservice</li>
+              <li>Supports multiple coding languages required to run services</li>
+              <li>Enables database separation</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Why not virtual machines!</h4>
+          <img data-src="./images/vbox.png" />
+
+          <aside class="notes">
+            <ol>
+              <li>There is option for deploying microservises application on virtual machines</li>
+              <li>However, virtual machines are not the best option</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Virtual machines vs Docker</h4>
+          <img style="width: 40%; margin-right: 5%;" data-src="./images/vms_microservices.png" />
+          <img style="width: 40%;" data-src="./images/docker_containers.png" />
+
+          <aside class="notes">
+            <ol>
+              <li>Docker is more effective when it comes to resource allocation</li>
+              <li>Docker is easier to deploy</li>
+              <li>Docker has smaller size</li>
+              <li>Docker has much faster startup time</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+          <h4>Thanks for the attention!</h4>
+
+          <aside class="notes">
+            <p>End of the presentation</p>
+          </aside>
+        </section>
+
 			</div>
 		</div>
 
