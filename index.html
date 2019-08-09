@@ -29,7 +29,7 @@
 			<div class="slides">
 				<section>
           <section>
-            <h1>Microservices and Docker</h1>
+            <h2>Microservices and Docker</h2>
 
             <aside class="notes">
               Topic is Microservices and Docker
@@ -73,22 +73,32 @@
           <aside class="notes">
               <ol>
                 <li>Monolithic architecture contains all modules in one place</li>
-                <li>Has some benfits on classical small applications, but has far many drawbacks compared to the benefits</li>
-                <li>Scalability issues (hard to add new big modules)</li>
-                <li>Reliability issues (one bug will affect the availability of whole application)</li>
-                <li>Availability issues (if one service fails, the whole application has to be brought down)</li>
-                <li>Agility issues (even small component change requires reassambling the application)</li>
-                <li>Software Stack Autonomy issues (has barrier on implementing different stacks)</li>
-                <li>Issues with new team members (takes long time for getting to know whole application)</li>
+                <li>Traditional and popular approach for many applications</li>
+                <li>Diagram explained</li>
               </ol>
             </aside>
+        </section>
+
+        <section>
+          <h4>What is wrong with monolith?</h4>
+
+          <aside class="notes">
+            <ol>
+              <li>Reuqirement changed over time</li>
+              <li>Monolith has more drawbacks compared to benefits</li>
+            </ol>
+          </aside>
         </section>
 
         <section>
           <img data-src="./images/mono_vs_micro.jpg" />
 
           <aside class="notes">
-            <p>Microservices are solution</p>
+            <ol>
+              <li>Monolith has huge problems on large scaled projects</li>
+              <li>Solves problems by dividing app into multiple independent services</li>
+              <li>Services talk with each other through REST APIs</li>
+            </ol>
           </aside>
         </section>
 
@@ -98,14 +108,8 @@
 
           <aside class="notes">
             <ol>
-              <li>Solves problems by dividing app into multiple independent services</li>
-              <li>Services talk with each other through REST APIs</li>
-              <li>Each service can be developed on different software stack</li>
-              <li>However, has some drawbacks!</li>
-              <li>Complex architect design</li>
-              <li>Hard to deploy</li>
-              <li>Complex testing</li>
-              <li>Multiple database updates</li>
+              <li>Diagram explanantion</li>
+              <li>Real case explanation for microservice architecture</li>
             </ol>
           </aside>
         </section>
@@ -116,18 +120,20 @@
 
           <aside class="notes">
             <ol>
-              <li>Highly depends on the scale of the project</li>
-              <li>Prefer monolith for simple and small projects</li>
-              <li>Microservice can be better solution for large and long term projects</li>
+              <li>Scalability issues</li>
+              <li>Availability and reliability issues</li>
+              <li>Implementation of different languages and frameworks</li>
+              <li>New team members on both architectures</li>
+              <li>Which one is the best?</li>
             </ol>
           </aside>
         </section>
 
         <section>
-          <h3>Deployment issues?</h3>
+          <h3>Are microservices perfect?</h3>
 
           <aside class="notes">
-            <p>How to solve the microservice deployment issues?</p>
+            <p>Complexities of microservices on design and deployment</p>
           </aside>
         </section>
 
@@ -138,9 +144,9 @@
 
           <aside class="notes">
             <ol>
-              <li>Enables task isolation by creating docker container for each microservice</li>
-              <li>Supports multiple coding languages required to run services</li>
-              <li>Enables database separation</li>
+              <li>What is Docker?</li>
+              <li>Makes the deployment much more easier</li>
+              <li>Uses Containers</li>
             </ol>
           </aside>
         </section>
@@ -151,8 +157,7 @@
 
           <aside class="notes">
             <ol>
-              <li>There is option for deploying microservises application on virtual machines</li>
-              <li>However, virtual machines are not the best option</li>
+              <li>Before Docker alternative was VMs. But why they are not perfect for Microservices?</li>
             </ol>
           </aside>
         </section>
@@ -164,12 +169,35 @@
 
           <aside class="notes">
             <ol>
+              <li>Virtual machine deployment explained</li>
+              <li>Docker deployment explained</li>
               <li>Docker is more effective when it comes to resource allocation</li>
-              <li>Docker is easier to deploy</li>
-              <li>Docker has smaller size</li>
-              <li>Docker has much faster startup time</li>
             </ol>
           </aside>
+        </section>
+
+        <section>
+          <h4>Why deployment of microservices are so problematic?</h4>
+
+          <aside class="notes">
+            <ol>
+              <li>Various services have various dependencies</li>
+              <li>It is hard to maintain the dependencies on all stages of development</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section>
+            <img data-src="./images/docker_process.png" />
+  
+            <aside class="notes">
+              <ol>
+                <li>Docker deployment process</li>
+                <li>Docker Images</li>
+                <li>Docker Containers</li>
+                <li>Docker Hub</li>
+              </ol>
+            </aside>
         </section>
 
         <section>
